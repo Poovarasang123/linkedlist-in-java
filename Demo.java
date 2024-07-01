@@ -5,9 +5,9 @@ public class Demo {
         list.insertAtBeginning(5);
         list.insertAtPos(2, 6);
         list.insertAtLast(7);
-        //list.deleteAtPos(0);
-        //list.deleteAtLast();
-        // list.Display();
+        list.deleteAtPos(0);
+        list.deleteAtLast();
+        list.Display();
 
         for(int a:list){
             System.out.print(a+" ");
