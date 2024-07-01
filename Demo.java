@@ -5,6 +5,7 @@ public class Demo {
         list.insertAtBeginning(5);
         list.insertAtPos(2, 6);
         list.insertAtLast(7);
+        list.reverse();
         list.deleteAtPos(0);
         list.deleteAtLast();
         list.Display();
