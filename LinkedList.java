@@ -93,6 +93,18 @@ public class LinkedList<T> implements Iterable<T>{
         }
         prev.next=null;
     }
+    public void reverse(){
+        Node prev = null;
+        Node curr = head;
+        Node next = curr.next;
+        while(curr!=null){
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        head = prev;
+    }
     public Iterator<T> iterator(){
         return new Iterator<T>() {
             Node temp = head;
