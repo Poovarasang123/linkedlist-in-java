@@ -8,10 +8,11 @@ public class Demo {
         list.reverse();
         list.deleteAtPos(0);
         list.deleteAtLast();
-        list.Display();
-
-        for(int a:list){
+        
+        for(int a:list){ //displays the list
             System.out.print(a+" ");
         }
+        list.FindKey(6);
+        System.out.println(list.countOfList());
     }
 }
