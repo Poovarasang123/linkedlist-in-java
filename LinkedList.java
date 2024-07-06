@@ -1,5 +1,4 @@
 import java.util.Iterator;
-
 public class LinkedList<T> implements Iterable<T>{
     Node head;
     class Node{
@@ -23,12 +22,32 @@ public class LinkedList<T> implements Iterable<T>{
             head = newNode;
         }
     }
-    public void Display(){
-        Node temp = head;
+    public void FindKey(T searchkey){
+        Node temp = head; 
+        if(head == null) {
+            throw new IndexOutOfBoundsException("Search attempted in empty list");
+        }
         while(temp != null) {
-            System.out.print(temp.data + " ");
+            if(temp.data == searchkey){
+               System.out.println();
+               System.out.println("search key found "+temp.data);
+               return;
+            }
             temp = temp.next;
         }
+        System.out.println("search key not found");
+    }
+    public int countOfList(){
+        Node temp = head;
+        if(head == null) {
+            return 0;
+        }
+        int count = 0;
+        while(temp != null) {
+            count++;
+            temp = temp.next;
+        }
+        return count;
     }
     public void insertAtPos(int pos,T val){
         if(pos==0){
